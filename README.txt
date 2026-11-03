@@ -4,6 +4,41 @@ Turns .cube LUT files (from DaVinci Resolve, Photoshop, Envato packs, etc.)
 into PNG LUT textures for game engines.
 
 
+DISCLAIMER
+=================
+This tool was made by Claude AI. Make of that what you will. You are free to use and transform this tool as you see fit. As I did not code this, I require no attribution or credit. Hope it helps!
+
+
+REQUIREMENTS
+=================
+### Using the app (most people)
+No installation needed. Download **`LUT Converter.exe`** from the [Releases](../../releases) page and run it.
+Windows 10 or 11 only.
+
+> Windows may show a "Windows protected your PC" message the first time, because the app isn't signed with a paid certificate. Click **More info → Run anyway**.
+
+### Running from source (developers)
+LUT Converter is written in **Python** and uses these modules:
+
+| Module | Used for |
+|---|---|
+| [PySide6](https://pypi.org/project/PySide6/) | The interface (Qt for Python) |
+| [NumPy](https://pypi.org/project/numpy/) | The color math |
+| [Pillow](https://pypi.org/project/pillow/) | Reading and saving images |
+
+**You'll need Python 3.9 or newer.** Then, from the project folder:
+
+```
+pip install -r requirements.txt
+python lut_converter.py
+```
+
+On Windows you can also double-click `Run_LUT_Converter.bat`, which installs the modules automatically the first time.
+
+### Building the .exe yourself
+Double-click `Build_EXE.bat`. It installs [PyInstaller](https://pyinstaller.org/) and creates `dist\LUT Converter.exe`.
+
+
 HOW TO USE
 ----------
 1. Open "LUT Converter.exe".
